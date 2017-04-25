@@ -47,7 +47,6 @@ document.getElementById("id1")
 
             document.getElementById("id2").click();
             event.preventDefault();
-            document.getElementById('id1').value = "";
 
         }
     });
@@ -56,6 +55,10 @@ function myFunction(form) {
 
     var isUpated = false;
     var inputLetter = form.slovo.value;
+    
+    inputLetter = inputLetter.toLowerCase();
+    
+    document.getElementById('id1').value = "";
 
     if (inputLetter.length !== 1) {
         return;
